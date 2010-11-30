@@ -1,0 +1,5 @@
+development:
+  adapter: mysql
+  database: downloadUtil_development
+  pool: 5
+  timeout: 5000
