@@ -8,7 +8,17 @@ You are in the index ( LOGGED IN !)
 	<%= select_time() %>
   <br />
   <%= f.submit "Set Time!" %>
-
-
 <% end %>
 
+
+<ul>
+	<% for daily_download in @daily_downloads %>	
+	<div>
+		<h2><%= daily_download.title%></h2>
+		<p>
+			<%= link_to "add download source", new_daily_download_download_source_url( daily_download )%>
+			<br />
+		</p>
+	</div>
+	<% end %>
+</ul>

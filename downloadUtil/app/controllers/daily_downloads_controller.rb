@@ -26,17 +26,16 @@ class DailyDownloadsController < ApplicationController
     if @daily_download
       redirect_to daily_download_url( @daily_download )
     else
-      redirect_to "http://www.google.com"
+      redirect_to "http://www.google.com" # this is the error page. change this later
     end
      
   end
   
   
   def render_home_page
-    puts "in the render home page"
     @daily_download = DailyDownload.new
+    @daily_downloads = current_user.daily_downloads
     render :layout => "application", :file => "/daily_downloads/index.html.erb"
-    puts "after the render home page"
   end
   
   def render_welcome_page

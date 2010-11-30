@@ -11,6 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   
   
   map.resources :daily_downloads
+  map.resources :daily_downloads, :has_many => :download_sources
+
     
     
   map.connect ':controller/:action/:id'
