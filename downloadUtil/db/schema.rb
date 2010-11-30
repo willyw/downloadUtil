@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(:version => 20101130121805) do
 
   create_table "daily_downloads", :force => true do |t|
     t.time     "read_time"
+    t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

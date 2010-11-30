@@ -4,4 +4,5 @@
 =end
 class DailyDownload < ActiveRecord::Base
   has_many :download_sources
+  belongs_to :user
 end
